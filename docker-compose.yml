@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  cognimem:
+    build: .
+    container_name: cognimem
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./backups:/app/backups
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+  # 可选：PostgreSQL 服务（取消注释启用）
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: cognimem-postgres
+  #   environment:
+  #     POSTGRES_USER: cognimem
+  #     POSTGRES_PASSWORD: cognimem
+  #     POSTGRES_DB: cognimem_dev
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   ports:
+  #     - "5432:5432"
+
+volumes:
+  postgres_data:

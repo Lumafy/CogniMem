@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cognimem-mvp"
+version = "0.1.0"
+description = "Zero-dependency long-memory MVP for AI agents"
+authors = [
+    {name = "CogniMem Contributors", email = ""}
+]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+readme = "README.md"
+keywords = ["memory", "ai", "agent", "long-memory", "sqlite", "vector"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python 3 :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+
+[project.urls]
+Homepage = "https://github.com/cognimem/cognimem-mvp"
+Repository = "https://github.com/cognimem/cognimem-mvp"
+Issues = "https://github.com/cognimem/cognimem-mvp/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
