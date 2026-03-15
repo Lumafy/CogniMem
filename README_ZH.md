@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/logo.png" alt="CogniMem logo" width="720" />
+
 # 🧠 CogniMem
 ## 让 AI 不再每次都从零开始
 
